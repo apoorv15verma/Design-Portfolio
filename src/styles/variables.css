@@ -1,0 +1,84 @@
+:root {
+  /* ── Primary Scale ── */
+  --primary:        #6C63FF;
+  --primary-2:      #5651C7;
+  --primary-3:      #4744A8;
+  --primary-4:      #3C3792;
+  --primary-5:      #322C83;
+  --primary-6:      #292272;
+  --primary-7:      #201E50;
+  --primary-8:      #141528;
+  --primary-9:      #0D0E1B;
+  --primary-dark:   #4744A8;
+  --primary-light:  #5651C7;
+  --primary-hover:  #6155F0;
+
+  /* Accent (subtle primary tints) */
+  --accent:         #322C83;
+  --accent-light:   #201E50;
+
+  /* ── Surfaces ── */
+  --bg:             #0F0F0F;   /* Surface 1 */
+  --bg-secondary:   #141414;   /* Surface 2 */
+  --bg-tertiary:    #1A1A1A;   /* Surface 3 */
+  --surface:        #141414;
+  --input-bg:       #262626;   /* Input */
+
+  /* ── Text ── */
+  --text:           #FFFFFF;   /* Heading */
+  --text-1:         #F5F5F5;
+  --text-secondary: #D4D4D8;   /* Text 2 */
+  --text-muted:     #71717A;   /* Text 4 */
+  --text-subtle:    #52525B;   /* Text 5 */
+  --text-inverse:   #0F0F0F;
+
+  /* ── Borders ── */
+  --border:         #27282E;   /* Border 2 */
+  --border-dark:    #191A1F;   /* Border 1 */
+
+  /* ── Status ── */
+  --success:        #17C653;
+  --success-bg:     #031C0B;
+  --warning:        #F6B100;
+  --warning-bg:     #241A00;
+  --error:          #F8285A;
+  --error-bg:       #23060D;
+  --info:           #1B84FF;
+  --info-bg:        #041120;
+
+  /* ── Shadows (stronger on dark bg) ── */
+  --shadow-xs:      0 1px 3px rgba(0,0,0,0.4);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.5);
+  --shadow-md:      0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg:      0 8px 32px rgba(0,0,0,0.7);
+  --shadow-xl:      0 16px 48px rgba(0,0,0,0.8);
+  --shadow-card:    0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.5);
+  --shadow-primary: 0 8px 24px rgba(108,99,255,0.45);
+
+  /* ── Spacing ── */
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;
+  --space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;
+  --space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;
+
+  /* ── Radius ── */
+  --radius-sm:4px;--radius-md:8px;--radius-lg:12px;
+  --radius-xl:16px;--radius-2xl:24px;--radius-3xl:32px;--radius-full:9999px;
+
+  /* ── Typography ── */
+  --font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-xs:.75rem;--font-sm:.875rem;--font-base:1rem;--font-md:1.125rem;
+  --font-lg:1.25rem;--font-xl:1.5rem;--font-2xl:2rem;--font-3xl:2.5rem;--font-4xl:3rem;
+  --fw-light:300;--fw-regular:400;--fw-medium:500;--fw-semibold:600;
+  --fw-bold:700;--fw-extrabold:800;--fw-black:900;
+  --lh-tight:1.1;--lh-snug:1.25;--lh-normal:1.5;--lh-relaxed:1.75;
+  --ls-tight:-0.02em;--ls-normal:0;--ls-wide:0.05em;--ls-wider:0.1em;
+
+  /* ── Layout ── */
+  --sidebar-width:320px;--content-max:1400px;
+  --nav-height:56px;
+
+  /* ── Transitions ── */
+  --transition-fast:0.15s ease;--transition-base:0.2s ease;
+  --transition-slow:0.35s ease;
+}

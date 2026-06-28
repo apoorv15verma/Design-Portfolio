@@ -1,0 +1,186 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: box-shadow .35s ease, transform .35s ease;
+  outline: none;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* ── Thumb wrapper ── */
+.card-thumb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  /* No fixed aspect-ratio — images define the height */
+  background: var(--bg-secondary);
+}
+
+/* ── All images stacked full-width ── */
+.card-images-stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  line-height: 0; /* removes inline gap between imgs */
+}
+
+.card-stack-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Tiny gap between images */
+  border-bottom: 2px solid var(--bg);
+}
+
+.card-stack-img:last-child {
+  border-bottom: none;
+}
+
+/* ── Gradient fallback ── */
+.card-thumb-gradient {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+}
+
+.card-thumb-content {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  right: var(--space-4);
+  z-index: 2;
+}
+
+.card-thumb-label {
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: var(--fw-black);
+  color: rgba(0, 0, 0, 0.25);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.card-thumb-label--light { color: rgba(255,255,255,.2); }
+
+.card-thumb-category {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: rgba(0,0,0,.3);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-top: 4px;
+}
+
+.card-thumb-category--light { color: rgba(255,255,255,.3); }
+
+/* ── Category tag (top-left badge) ── */
+.card-tag {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  z-index: 3;
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+/* ── Hover overlay ── */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.card-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-tertiary);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  font-family: var(--font-family);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  transition: all var(--transition-fast);
+}
+
+.card-cta-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: scale(1.03);
+}
+
+/* ── Card info ── */
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px 16px 0;
+  background: #141414;
+}
+
+.card-info-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.card-title {
+  font-size: var(--font-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+
+.card-year {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .card-tag { font-size: 9px; padding: 3px 8px; }
+  .card-info { padding: var(--space-2) var(--space-3) var(--space-3); }
+  .card-title { font-size: 12px; }
+  .card-cta-btn { font-size: 12px; padding: 8px 16px; }
+}

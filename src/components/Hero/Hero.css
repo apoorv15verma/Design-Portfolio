@@ -1,0 +1,127 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  background: #5000CC;
+}
+
+.hero-cover {
+  position: relative;
+  z-index: 0;
+  line-height: 0;
+}
+
+.hero-cover-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-cover-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.18) 60%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  z-index: 4;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(98,0,238,0.5);
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.7);
+  flex-shrink: 0;
+}
+
+.hero-badge-divider {
+  width: 1px;
+  height: 13px;
+  background: rgba(255,255,255,0.3);
+}
+
+.hero-name-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+  z-index: 3;
+}
+
+.hero-name {
+  font-size: clamp(22px, 3.5vw, 44px);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.hero-tagline {
+  font-size: clamp(11px, 1.2vw, 14px);
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  margin-top: 5px;
+  letter-spacing: 0.04em;
+}
+
+.hero-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: var(--radius-full);
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.hero-chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.hero-chip-1 { bottom: 28px; right: 32px; }
+.hero-chip-2 { bottom: 70px; right: 64px; }
+
+@media (max-width: 1024px) {
+  .hero-badge { top: 18px; right: 20px; font-size: 10px; padding: 9px 13px; }
+  .hero-name-overlay { bottom: 20px; left: 24px; }
+  .hero-chip-1 { bottom: 22px; right: 20px; }
+  .hero-chip-2 { bottom: 60px; right: 52px; }
+}
+
+@media (max-width: 768px) {
+  .hero-name-overlay { display: none; }
+  .hero-chip-1, .hero-chip-2 { display: none; }
+}

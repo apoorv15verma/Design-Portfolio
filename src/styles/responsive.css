@@ -1,0 +1,124 @@
+/* Responsive breakpoints */
+
+/* Desktop first approach */
+/* Large Desktop: > 1400px */
+@media (min-width: 1400px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+/* Desktop: 1024px - 1400px */
+@media (max-width: 1280px) {
+  :root {
+    --sidebar-width: 280px;
+  }
+}
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+  :root {
+    --hero-height-desktop: var(--hero-height-tablet);
+  }
+
+  /* Sidebar becomes top profile section */
+  .sidebar-col {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-sticky {
+    position: static;
+    height: auto;
+  }
+
+  /* Profile layout becomes horizontal on tablet */
+  .sidebar-profile-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-6);
+    padding: var(--space-6);
+  }
+
+  .sidebar-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Hide some sidebar sections on tablet, show in tabs */
+  .sidebar-extra {
+    display: none;
+  }
+
+  .main-col {
+    border-left: none;
+  }
+
+  /* Projects grid - 2 col */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: < 768px */
+@media (max-width: 768px) {
+  /* Hide desktop-only elements */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Show mobile-only elements */
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .sidebar-col {
+    display: none;
+  }
+
+  /* Mobile profile card shows above content */
+  .mobile-profile {
+    display: block !important;
+  }
+
+  .mobile-profile .profile-stats {
+    justify-content: center;
+  }
+
+  /* Mobile nav tabs */
+  .content-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .content-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Project grid - 2 col on mobile */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  /* Section padding reduction */
+  .section {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-4);
+  }
+}
+
+/* Small mobile: < 480px */
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+  }
+}
